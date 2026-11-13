@@ -81,21 +81,17 @@ section{padding:96px 0}
 .ep .watch:hover{color:var(--champagne)}
 
 
-/* stacked episodes. When an episode is on YouTube, replace its .player <a> with:
-   <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="..." allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe> */
+/* stacked episodes with inline players */
 .ep-list{display:flex;flex-direction:column;gap:34px}
 .ep-row{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:34px;align-items:center;
   background:var(--ink);border:1px solid rgba(201,162,75,.18);border-radius:16px;padding:22px}
-.ep-row .player{position:relative;display:block;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#000}
-.ep-row .player img,.ep-row .player iframe,.ep-row .player video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0;display:block}
-.ep-row .soon{position:absolute;left:14px;bottom:14px;padding:8px 12px;border-radius:999px;background:rgba(11,10,10,.82);
-  font:600 .68rem/1 Oswald,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--champagne);border:1px solid rgba(201,162,75,.5)}
+.ep-row .player{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#000}
+.ep-row .player video,.ep-row .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;background:#000}
 .ep-row .info{display:flex;flex-direction:column;gap:12px;padding-right:8px}
 .ep-row .meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.ep-row .dur{font:500 .74rem/1 Oswald,sans-serif;letter-spacing:.2em;color:var(--muted)}
 .ep-row h3{font:600 1.5rem/1.28 "Bodoni Moda",serif}
 .ep-row p{color:var(--muted);font-size:.98rem}
-.ep-row .watch{font:600 .76rem/1 Oswald,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);text-decoration:none}
-.ep-row .watch:hover{color:var(--champagne)}
 @media (max-width:860px){.ep-row{grid-template-columns:1fr;gap:20px;padding:16px}.ep-row .info{padding:0 6px 6px}}
 
 /* about */
@@ -174,30 +170,27 @@ footer a:hover{color:var(--champagne)}
       </div>
       <div class="ep-list">
         <article class="ep-row" id="episode-3">
-          <div class="player"><video controls playsinline preload="none" poster="assets/ep3.jpg" src="https://iwffmxma6re5.nobgp.link/ep3.mp4"></video></div>
+          <div class="player"><iframe src="https://www.youtube-nocookie.com/embed/bHZxqorI0AY?rel=0&amp;modestbranding=1" title="Gigs and Wigs Episode 3" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
           <div class="info">
-            <div class="meta"><span class="label">Episode 3</span><span class="tag">Guest</span><span class="tag">Explicit</span></div>
+            <div class="meta"><span class="label">Episode 3</span><span class="dur">24:52</span><span class="tag">Guest</span><span class="tag">Explicit</span></div>
             <h3>TMI, Protest Songs and Punk‑Rock Bangs with Jane Wiedlin of The Go‑Go’s</h3>
             <p>Jane Wiedlin pulls up a chair at the salon to talk about her memoir <em>TMI</em>, her new album of protest‑song covers <em>I Protest</em>, singing “Rush Hour” live, and why she does not want a round haircut.</p>
-            <a class="watch" href="https://www.youtube.com/@GigsandWigsPodcast?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube →</a>
           </div>
         </article>
         <article class="ep-row" id="episode-2">
-          <div class="player"><video controls playsinline preload="none" poster="assets/ep2.jpg" src="https://iwffmxma6re5.nobgp.link/ep2.mp4"></video></div>
+          <div class="player"><iframe src="https://www.youtube-nocookie.com/embed/JFEEUIrJ4MI?rel=0&amp;modestbranding=1" title="Gigs and Wigs Episode 2" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
           <div class="info">
-            <div class="meta"><span class="label">Episode 2</span></div>
+            <div class="meta"><span class="label">Episode 2</span><span class="dur">8:08</span></div>
             <h3>The Transformer &amp; the Bravo‑verse: How Brandon and Vicki Got Into Hair</h3>
             <p>Extensions at age ten in Las Vegas, wigs and weaves in San Francisco, and a first week in LA that changed everything. Before the red carpets and reality TV, there were two kids who just had to do hair.</p>
-            <a class="watch" href="https://www.youtube.com/@GigsandWigsPodcast?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube →</a>
           </div>
         </article>
         <article class="ep-row" id="episode-1">
-          <div class="player"><video controls playsinline preload="none" poster="assets/ep1.jpg" src="https://iwffmxma6re5.nobgp.link/ep1.mp4"></video></div>
+          <div class="player"><iframe src="https://www.youtube-nocookie.com/embed/ZoTuEx1ma70?rel=0&amp;modestbranding=1" title="Gigs and Wigs Episode 1" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
           <div class="info">
-            <div class="meta"><span class="label">Episode 1</span></div>
+            <div class="meta"><span class="label">Episode 1</span><span class="dur">23:38</span></div>
             <h3>Welcome to Gigs and Wigs: Swim Week, UFOs and the Art of Overpacking</h3>
             <p>The inaugural episode. Brandon and his “hair wife” Vicki tell how they met at a hair show in Orlando, then catch up on a month of gigs: Miami Swim Week, Pee‑wee’s Playhouse 40th, a night of UFO‑spotting in the desert, and packing for a European tour with Devo and The B‑52’s.</p>
-            <a class="watch" href="https://www.youtube.com/@GigsandWigsPodcast?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube →</a>
           </div>
         </article>
       </div>
